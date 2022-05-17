@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ORf-vz-RVU">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CareMind" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cTp-6a-Nra">
+                                <rect key="frame" x="142" y="73" width="107" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Olá, Lec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPF-tB-IZE">
+                                <rect key="frame" x="32" y="212" width="124" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zC-Rt-5xp">
+                                <rect key="frame" x="32" y="254" width="124" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.81960784313725488" blue="0.52941176470588236" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="memoji-happy" translatesAutoresizingMaskIntoConstraints="NO" id="xuv-PX-SOv">
+                                <rect key="frame" x="32" y="300" width="326" height="328"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bem cuidada." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbN-1I-9SS">
+                                <rect key="frame" x="217" y="659" width="123" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Continue fazendo os desafios." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQw-5n-Wrc">
+                                <rect key="frame" x="32" y="699" width="184" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sua saúde mental está" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ux-qT-WHI">
+                                <rect key="frame" x="32" y="658" width="180" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.16862745098039217" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" image="house" catalog="system" id="RqV-2h-mjb"/>
+                    <connections>
+                        <outlet property="callToAction" destination="fQw-5n-Wrc" id="xxY-Vp-0Kx"/>
+                        <outlet property="careMindLogo" destination="cTp-6a-Nra" id="cSR-Fc-5Vx"/>
+                        <outlet property="helloUsername" destination="WPF-tB-IZE" id="5kb-cv-acJ"/>
+                        <outlet property="leftSentenceStatus" destination="2Ux-qT-WHI" id="rO6-WK-9AY"/>
+                        <outlet property="memoji" destination="xuv-PX-SOv" id="OsZ-gg-c28"/>
+                        <outlet property="mindStatus" destination="hbN-1I-9SS" id="RCH-aB-bDr"/>
+                        <outlet property="underline" destination="6zC-Rt-5xp" id="OBB-bG-uk4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935.38461538461536" y="89.5734597156398"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GCX-7J-gei">
+            <objects>
+                <viewController id="1Yl-l5-iHd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WO5-Dv-8Hb">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-sU-Ub8">
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="49H-4F-QoO">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="717"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0G2-he-kNf">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="717"/>
+                                                <color key="backgroundColor" red="0.14509803921568626" green="0.16862745098039217" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="756" id="Xk9-l8-zPf"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="49H-4F-QoO" firstAttribute="top" secondItem="wtr-ET-DaC" secondAttribute="top" id="4xh-JV-jFh"/>
+                                    <constraint firstItem="49H-4F-QoO" firstAttribute="leading" secondItem="wtr-ET-DaC" secondAttribute="leading" id="8kt-2k-8Ja"/>
+                                    <constraint firstItem="49H-4F-QoO" firstAttribute="bottom" secondItem="wLM-Nj-IKE" secondAttribute="bottom" id="M3V-Oc-4qt"/>
+                                    <constraint firstItem="49H-4F-QoO" firstAttribute="bottom" secondItem="wtr-ET-DaC" secondAttribute="bottom" id="XTe-Xn-Yw1"/>
+                                    <constraint firstItem="49H-4F-QoO" firstAttribute="trailing" secondItem="wtr-ET-DaC" secondAttribute="trailing" id="d1L-N0-ejT"/>
+                                    <constraint firstItem="49H-4F-QoO" firstAttribute="width" secondItem="wLM-Nj-IKE" secondAttribute="width" id="gzm-dW-Lw0"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="wtr-ET-DaC"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="wLM-Nj-IKE"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OUv-WS-vbY"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="5Dc-eO-Tzi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mL7-hg-7re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933.84615384615381" y="821.80094786729853"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="sSV-5m-2Ch">
+            <objects>
+                <viewController id="UUC-cf-ynh" customClass="CategoryViewController" customModule="CareMind" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4OK-bW-k08">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escolha a categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1I8-4J-jb6">
+                                <rect key="frame" x="44" y="144" width="206" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wke-Q2-rJU">
+                                <rect key="frame" x="48" y="208" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.81960784310000001" blue="0.52941176469999995" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2kh-Er-8q8">
+                                <rect key="frame" x="44" y="233" width="326" height="461"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yxj-4p-0mp">
+                                    <size key="itemSize" width="326" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="H6j-wK-SO4">
+                                        <rect key="frame" x="0.0" y="0.0" width="326" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BFY-7r-tYN">
+                                            <rect key="frame" x="0.0" y="0.0" width="326" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gm7-6R-KTm"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="heart.text.square" catalog="system" id="g3w-jL-FVn"/>
+                    <connections>
+                        <outlet property="categories" destination="2kh-Er-8q8" id="JQg-cc-LiX"/>
+                        <outlet property="titleCategory" destination="1I8-4J-jb6" id="pEX-OA-8s0"/>
+                        <outlet property="underline" destination="Wke-Q2-rJU" id="Yj1-sF-t6R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HKT-dX-n9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933.84615384615381" y="-584.36018957345971"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="p0p-Or-Cf4">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ORf-vz-RVU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d7m-AQ-ZGP">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.98431372549999996" green="0.81960784310000001" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.98431372549999996" green="0.81960784310000001" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="F1P-wE-i7n"/>
+                        <segue destination="UUC-cf-ynh" kind="relationship" relationship="viewControllers" id="Yf5-7Z-ny2"/>
+                        <segue destination="1Yl-l5-iHd" kind="relationship" relationship="viewControllers" id="YKR-fQ-rmT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9w-Kd-l6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-69" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="heart.text.square" catalog="system" width="128" height="114"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="logo" width="107" height="107"/>
+        <image name="memoji-happy" width="313" height="434"/>
+    </resources>
+</document>
