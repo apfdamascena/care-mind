@@ -27,5 +27,11 @@ class CardCollectionViewCell: UICollectionViewCell {
         titleCard.text = card.title
         contentCard.text = card.content
     }
+    
+    func draw(_ card: Video){
+        imageCard.image = UIImage(named: card.image)
+        titleCard.text = card.title
+        contentCard.text = card.content
+    }
 
 }

@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         constraints()
     }
-    
+
     private func constraints(){
         let views = [
             careMindLogo,

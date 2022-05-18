@@ -15,11 +15,10 @@ class CategoryViewController: UIViewController {
     
     let cards: [Card] = [
         Card(image: "planta", title: "Cultivar plantas", content: "testando"),
-        Card(image: "planta", title: "Cultivar plantas", content: "testando"),
-        Card(image: "planta", title: "Cultivar plantas", content: "testando"),
-        Card(image: "planta", title: "Cultivar plantas", content: "testando"),
-        Card(image: "planta", title: "Cultivar plantas", content: "testando"),
-        Card(image: "planta", title: "Cultivar plantas", content: "testando")
+        Card(image: "leitura", title: "Leitura", content: "testando"),
+        Card(image: "filmes", title: "Cultivar plantas", content: "testando"),
+        Card(image: "atividade", title: "Cultivar plantas", content: "testando"),
+        Card(image: "musica", title: "Cultivar plantas", content: "testando"),
     ]
     
     
@@ -74,5 +73,9 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
         let card = cards[indexPath.row]
         cell.draw(card)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "categoryToChallenge", sender: self)
     }
 }

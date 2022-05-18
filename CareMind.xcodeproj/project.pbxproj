@@ -20,6 +20,11 @@
 		0D2AE56B28331F4200F3B9A4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AE56A28331F4200F3B9A4 /* Card.swift */; };
 		0D2AE56E28333D7400F3B9A4 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 0D2AE56D28333D7400F3B9A4 /* YouTubeiOSPlayerHelper */; };
 		0D2AE57128333E5000F3B9A4 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AE57028333E5000F3B9A4 /* VideosViewController.swift */; };
+		0D2AE57328334FE500F3B9A4 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AE57228334FE500F3B9A4 /* Video.swift */; };
+		0D2AE5752834384400F3B9A4 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AE5742834384400F3B9A4 /* ChallengeViewController.swift */; };
+		0D5591A62834A2E40011F6B1 /* ChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591A52834A2E40011F6B1 /* ChallengeTableViewCell.swift */; };
+		0D5591A92834ADF20011F6B1 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591A82834ADF20011F6B1 /* Challenge.swift */; };
+		0D5591AF2834C3B30011F6B1 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591AE2834C3B30011F6B1 /* Checkbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		0D2AE56628331EAB00F3B9A4 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		0D2AE56A28331F4200F3B9A4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0D2AE57028333E5000F3B9A4 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
+		0D2AE57228334FE500F3B9A4 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		0D2AE5742834384400F3B9A4 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		0D5591A52834A2E40011F6B1 /* ChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTableViewCell.swift; sourceTree = "<group>"; };
+		0D5591A82834ADF20011F6B1 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		0D5591AE2834C3B30011F6B1 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,8 @@
 				0D2AE53A2831DBD900F3B9A4 /* Main.storyboard */,
 				0D2AE56528331EAB00F3B9A4 /* CardCollectionViewCell.swift */,
 				0D2AE56628331EAB00F3B9A4 /* CardCollectionViewCell.xib */,
+				0D5591A52834A2E40011F6B1 /* ChallengeTableViewCell.swift */,
+				0D5591AE2834C3B30011F6B1 /* Checkbox.swift */,
 			);
 			path = CareMind;
 			sourceTree = "<group>";
@@ -92,6 +104,7 @@
 				0D2AE54F2833002900F3B9A4 /* RootViewController.swift */,
 				0D2AE5382831DBD900F3B9A4 /* ViewController.swift */,
 				0D2AE57028333E5000F3B9A4 /* VideosViewController.swift */,
+				0D2AE5742834384400F3B9A4 /* ChallengeViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -100,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				0D2AE56A28331F4200F3B9A4 /* Card.swift */,
+				0D2AE57228334FE500F3B9A4 /* Video.swift */,
+				0D5591A82834ADF20011F6B1 /* Challenge.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -190,11 +205,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D2AE558283306CB00F3B9A4 /* CategoryViewController.swift in Sources */,
+				0D5591A92834ADF20011F6B1 /* Challenge.swift in Sources */,
 				0D2AE5392831DBD900F3B9A4 /* ViewController.swift in Sources */,
 				0D2AE56B28331F4200F3B9A4 /* Card.swift in Sources */,
 				0D2AE5352831DBD900F3B9A4 /* AppDelegate.swift in Sources */,
+				0D2AE57328334FE500F3B9A4 /* Video.swift in Sources */,
 				0D2AE5502833002900F3B9A4 /* RootViewController.swift in Sources */,
+				0D2AE5752834384400F3B9A4 /* ChallengeViewController.swift in Sources */,
 				0D2AE56728331EAB00F3B9A4 /* CardCollectionViewCell.swift in Sources */,
+				0D5591A62834A2E40011F6B1 /* ChallengeTableViewCell.swift in Sources */,
+				0D5591AF2834C3B30011F6B1 /* Checkbox.swift in Sources */,
 				0D2AE57128333E5000F3B9A4 /* VideosViewController.swift in Sources */,
 				0D2AE5372831DBD900F3B9A4 /* SceneDelegate.swift in Sources */,
 			);

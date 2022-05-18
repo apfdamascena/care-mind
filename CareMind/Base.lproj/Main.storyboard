@@ -100,8 +100,8 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escolha a categoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INN-3m-ARJ">
-                                                        <rect key="frame" x="75" y="29" width="206" height="46"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dicas sobre saúde mental" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INN-3m-ARJ">
+                                                        <rect key="frame" x="75" y="29" width="264" height="46"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                         <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -160,6 +160,9 @@
                     <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="5Dc-eO-Tzi"/>
                     <connections>
                         <outlet property="player" destination="7fo-Oy-ZTU" id="sNF-jx-knq"/>
+                        <outlet property="titleVideosView" destination="INN-3m-ARJ" id="n5x-Cv-5Dv"/>
+                        <outlet property="underline" destination="X2l-zC-6yb" id="2a5-Ns-KtT"/>
+                        <outlet property="videos" destination="8dv-uD-qVg" id="2Fr-Nv-Har"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mL7-hg-7re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -211,16 +214,76 @@
                         <viewLayoutGuide key="safeArea" id="Gm7-6R-KTm"/>
                         <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="heart.text.square" catalog="system" id="g3w-jL-FVn"/>
+                    <navigationItem key="navigationItem" id="vf5-wi-Wc9"/>
                     <connections>
                         <outlet property="categories" destination="2kh-Er-8q8" id="JQg-cc-LiX"/>
                         <outlet property="titleCategory" destination="1I8-4J-jb6" id="pEX-OA-8s0"/>
                         <outlet property="underline" destination="Wke-Q2-rJU" id="Yj1-sF-t6R"/>
+                        <segue destination="wEE-mC-NUl" kind="show" identifier="categoryToChallenge" id="Zaj-6V-hKn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKT-dX-n9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933.84615384615381" y="-584.36018957345971"/>
+            <point key="canvasLocation" x="1926" y="-574"/>
+        </scene>
+        <!--Challenge View Controller-->
+        <scene sceneID="2TP-ML-LN4">
+            <objects>
+                <viewController id="wEE-mC-NUl" customClass="ChallengeViewController" customModule="CareMind" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gnx-xv-Qg0">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desafios completos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpP-Y9-ulJ">
+                                <rect key="frame" x="120" y="138" width="158" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22L-X6-dNW">
+                                <rect key="frame" x="120" y="232" width="58" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                <color key="textColor" red="0.98431372549999996" green="0.81960784310000001" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="B1u-bn-jkt">
+                                <rect key="frame" x="32" y="303" width="326" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChallengeTableCell" id="gls-vn-fL8">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="326" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gls-vn-fL8" id="d45-ZP-kWH">
+                                            <rect key="frame" x="0.0" y="0.0" width="326" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85C-pc-Jez">
+                                <rect key="frame" x="169" y="610" width="85" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Adicionar"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MhS-aY-iUW"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yMh-bM-O1Z"/>
+                    <connections>
+                        <outlet property="addChallenge" destination="85C-pc-Jez" id="HjK-ki-JQS"/>
+                        <outlet property="challenges" destination="B1u-bn-jkt" id="A5h-yD-7js"/>
+                        <outlet property="completedChallenge" destination="22L-X6-dNW" id="cN8-gg-TDP"/>
+                        <outlet property="titleChallenge" destination="FpP-Y9-ulJ" id="AGr-6R-g27"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6a-Io-ZeV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2812.3076923076924" y="-574.4075829383886"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="p0p-Or-Cf4">
@@ -231,18 +294,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.98431372549999996" green="0.81960784310000001" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.1450980392" green="0.16862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="0.98431372549999996" green="0.81960784310000001" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="F1P-wE-i7n"/>
-                        <segue destination="UUC-cf-ynh" kind="relationship" relationship="viewControllers" id="Yf5-7Z-ny2"/>
+                        <segue destination="ZqE-AA-Fqg" kind="relationship" relationship="viewControllers" id="Yf5-7Z-ny2"/>
                         <segue destination="1Yl-l5-iHd" kind="relationship" relationship="viewControllers" id="YKR-fQ-rmT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9w-Kd-l6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-69" y="90"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GXR-VL-ywG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZqE-AA-Fqg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="heart.text.square" catalog="system" id="g3w-jL-FVn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WU9-qv-pPF">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UUC-cf-ynh" kind="relationship" relationship="rootViewController" id="VAO-WG-B28"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNr-TJ-S7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933.84615384615381" y="-584.36018957345971"/>
         </scene>
     </scenes>
     <resources>
