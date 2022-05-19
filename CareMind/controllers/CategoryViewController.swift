@@ -13,6 +13,9 @@ class CategoryViewController: UIViewController {
     @IBOutlet weak var categories: UICollectionView!
     @IBOutlet weak var underline: UIView!
     
+    let goBackColor = UIColor(red: 251/255.0, green: 209/255.0, blue: 135/255.0 , alpha: 1)
+    let borderColor = UIColor(red: 251/255.0, green: 209/255.0, blue: 135/255.0 , alpha: 0.7)
+
     let cards: [Card] = [
         Card(image: "planta", title: "Cultivar plantas", content: "testando"),
         Card(image: "leitura", title: "Leitura", content: "testando"),
@@ -22,15 +25,14 @@ class CategoryViewController: UIViewController {
     ]
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = goBackColor
         categories.dataSource = self
         categories.delegate = self
         constraints()
-        categories.register(
-            UINib(nibName: CardCollectionViewCell.nib, bundle: nil),
-            forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
+        
+        categories.register(CardCCollectionViewCell.self, forCellWithReuseIdentifier: CardCCollectionViewCell.identifier)
     }
     
     private func constraints(){
@@ -48,6 +50,7 @@ class CategoryViewController: UIViewController {
             titleCategory.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 88),
             titleCategory.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 32),
             
+
             underline.topAnchor.constraint(equalTo: titleCategory.bottomAnchor, constant: 1),
             underline.heightAnchor.constraint(equalToConstant: 1),
             underline.widthAnchor.constraint(equalTo: titleCategory.widthAnchor),
@@ -69,8 +72,12 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCCollectionViewCell.identifier, for: indexPath) as? CardCCollectionViewCell else { return UICollectionViewCell() }
+        
         let card = cards[indexPath.row]
+        cell.layer.borderWidth = 2
+        cell.layer.cornerRadius = 8
+        cell.layer.borderColor = borderColor.cgColor
         cell.draw(card)
         return cell
     }

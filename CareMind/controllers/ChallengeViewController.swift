@@ -17,16 +17,18 @@ class ChallengeViewController: UIViewController {
     let backgroundCellAfterSelected = UIColor(red: 37/255.0, green: 43/255.0, blue: 54/255.0, alpha: 1)
     
     var challengesToDo = [
-        Challenge(done: true, text: "hola que tal dakdjhasdhaksjdhaskjdhasjkdhaskjdhajksdhaskjdhasjkdhasjkdhasjkdhasjkdhasjkdhasjkdhasjkdhajkhdk"),
-        Challenge(done: true, text: "hola que tal"),
-        Challenge(done: true, text: "hola que tal"),
-        Challenge(done: true, text: "hola que tal")
+        Challenge(done: true, text: "Olhar a plantinha na porta"),
+        Challenge(done: true, text: "Olhar a plantinha na porta"),
+        Challenge(done: true, text: "Olhar a plantinha na porta"),
+        Challenge(done: true, text: "Olhar a plantinha na porta"),
+
     ]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         constraints()
+        addChallenge.layer.cornerRadius = 4
         challenges.dataSource = self
         challenges.delegate = self
         challenges.register(ChallengeTableViewCell.self, forCellReuseIdentifier: ChallengeTableViewCell.identifier)
@@ -57,10 +59,17 @@ class ChallengeViewController: UIViewController {
             challenges.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height / 2 ),
             
             addChallenge.bottomAnchor.constraint(equalTo: challenges.bottomAnchor, constant: 60),
-            addChallenge.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+            addChallenge.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            addChallenge.heightAnchor.constraint(equalToConstant: 47),
+            addChallenge.widthAnchor.constraint(equalToConstant: 191)
 
         ])
     }
+    
+    @IBAction func didTapAddChallenge(_ sender: UIButton) {
+        performSegue(withIdentifier: "addView", sender: self)
+    }
+    
     
 }
 
@@ -83,7 +92,7 @@ extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return  48
+        return  52
     }
     
     
@@ -98,7 +107,6 @@ extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = challenges.cellForRow(at: indexPath) as? ChallengeTableViewCell else { return }
         cell.contentView.backgroundColor = backgroundCellAfterSelected
-
     }
     
     

@@ -24,7 +24,7 @@ class ChallengeTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        checkbox = Checkbox(frame: CGRect(x: 0 , y: 10, width: 32, height: contentView.frame.height - 10))
+        checkbox = Checkbox(frame: CGRect(x: 0 , y: 10, width: 32, height: 32))
         backgroundColor = backgroundCell
         contentView.addSubview(checkbox)
         contentView.addSubview(challengeContent)
@@ -36,11 +36,7 @@ class ChallengeTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0))
-        
-        let buttonSize = contentView.frame.height - 10
-        checkbox.frame = CGRect(x: 0 , y: 10, width: 32, height: buttonSize)
-        
+                
         challengeContent.frame = CGRect(x: checkbox.frame.maxX + 8,
                            y: 10,
                            width: contentView.frame.width - 40,

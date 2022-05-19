@@ -25,6 +25,8 @@
 		0D5591A62834A2E40011F6B1 /* ChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591A52834A2E40011F6B1 /* ChallengeTableViewCell.swift */; };
 		0D5591A92834ADF20011F6B1 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591A82834ADF20011F6B1 /* Challenge.swift */; };
 		0D5591AF2834C3B30011F6B1 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591AE2834C3B30011F6B1 /* Checkbox.swift */; };
+		0D5591B3283583AF0011F6B1 /* CardCCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591B2283583AF0011F6B1 /* CardCCollectionViewCell.swift */; };
+		0D5591B52835A0A20011F6B1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591B42835A0A20011F6B1 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		0D5591A52834A2E40011F6B1 /* ChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		0D5591A82834ADF20011F6B1 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		0D5591AE2834C3B30011F6B1 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		0D5591B2283583AF0011F6B1 /* CardCCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCCollectionViewCell.swift; sourceTree = "<group>"; };
+		0D5591B42835A0A20011F6B1 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +95,6 @@
 				0D2AE53A2831DBD900F3B9A4 /* Main.storyboard */,
 				0D2AE56528331EAB00F3B9A4 /* CardCollectionViewCell.swift */,
 				0D2AE56628331EAB00F3B9A4 /* CardCollectionViewCell.xib */,
-				0D5591A52834A2E40011F6B1 /* ChallengeTableViewCell.swift */,
-				0D5591AE2834C3B30011F6B1 /* Checkbox.swift */,
 			);
 			path = CareMind;
 			sourceTree = "<group>";
@@ -105,6 +107,7 @@
 				0D2AE5382831DBD900F3B9A4 /* ViewController.swift */,
 				0D2AE57028333E5000F3B9A4 /* VideosViewController.swift */,
 				0D2AE5742834384400F3B9A4 /* ChallengeViewController.swift */,
+				0D5591B42835A0A20011F6B1 /* AddViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -122,6 +125,9 @@
 		0D2AE56F28333D9500F3B9A4 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				0D5591A52834A2E40011F6B1 /* ChallengeTableViewCell.swift */,
+				0D5591AE2834C3B30011F6B1 /* Checkbox.swift */,
+				0D5591B2283583AF0011F6B1 /* CardCCollectionViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -206,8 +212,10 @@
 			files = (
 				0D2AE558283306CB00F3B9A4 /* CategoryViewController.swift in Sources */,
 				0D5591A92834ADF20011F6B1 /* Challenge.swift in Sources */,
+				0D5591B3283583AF0011F6B1 /* CardCCollectionViewCell.swift in Sources */,
 				0D2AE5392831DBD900F3B9A4 /* ViewController.swift in Sources */,
 				0D2AE56B28331F4200F3B9A4 /* Card.swift in Sources */,
+				0D5591B52835A0A20011F6B1 /* AddViewController.swift in Sources */,
 				0D2AE5352831DBD900F3B9A4 /* AppDelegate.swift in Sources */,
 				0D2AE57328334FE500F3B9A4 /* Video.swift in Sources */,
 				0D2AE5502833002900F3B9A4 /* RootViewController.swift in Sources */,

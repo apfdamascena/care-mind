@@ -13,17 +13,17 @@ import YouTubeiOSPlayerHelper
 class VideosViewController: UIViewController {
     
     @IBOutlet var player: YTPlayerView!
+    
+    let borderColor = UIColor(red: 251/255.0, green: 209/255.0, blue: 135/255.0 , alpha: 0.7)
 
     @IBOutlet weak var titleVideosView: UILabel!
     @IBOutlet weak var underline: UIView!
     @IBOutlet weak var videos: UICollectionView!
     
     let videosCard = [
-        Video(image: "corpofala", title: "testando", content: "testando", videoID: "RB-RcX5DS5A"),
-        Video(image: "limpeza", title: "testando", content: "testando", videoID: "RB-RcX5DS5A"),
-        Video(image: "planta", title: "testando", content: "testando", videoID: "RB-RcX5DS5A"),
-        Video(image: "planta", title: "testando", content: "testando", videoID: "RB-RcX5DS5A"),
-        Video(image: "planta", title: "testando", content: "testando", videoID: "RB-RcX5DS5A"),
+        Video(image: "corpofala", title: "testando", content: "testando", videoID: "AFYG2j0rkB8"),
+        Video(image: "limpeza", title: "testando", content: "testando", videoID: "FwcjXaXCEWY"),
+        Video(image: "exercicio", title: "testando", content: "testando", videoID: "DfIt58Ed5VU")
     ];
     
     override func viewDidLoad() {
@@ -32,13 +32,11 @@ class VideosViewController: UIViewController {
         videos.dataSource = self
         videos.delegate = self
         
-        player.load(withVideoId: "RB-RcX5DS5A",
+        player.load(withVideoId: "chlYYrisVVg",
                     playerVars: ["playsinline": 1])
         
-        videos.register(
-            UINib(nibName: CardCollectionViewCell.nib, bundle: nil),
-            forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
-        
+        videos.register(CardCCollectionViewCell.self, forCellWithReuseIdentifier: CardCCollectionViewCell.identifier)
+                
         constraints()
     }
     
@@ -93,9 +91,20 @@ extension VideosViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCCollectionViewCell.identifier, for: indexPath) as? CardCCollectionViewCell else { return UICollectionViewCell() }
         let video = videosCard[indexPath.row]
+        
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 8
+        cell.layer.borderColor = borderColor.cgColor
+        
         cell.draw(video)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = indexPath.row
+        let video = videosCard[index]
+        player.load(withVideoId: video.videoID)
     }
 }
