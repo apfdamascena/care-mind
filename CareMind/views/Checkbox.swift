@@ -11,6 +11,8 @@ class Checkbox: UIView {
 
     var isChecked = true
     
+    public var completionHandler: ((Bool) -> Void)?
+    
     let whiteBackground = UIColor(red: 231/255.0, green: 231/255.0, blue: 231/255.0, alpha: 1)
     let borderColorCheckbox = UIColor(red: 117/255.0, green: 110/255.0, blue: 206/255.0, alpha: 0.4).cgColor
     let checkedColor = UIColor(red: 117/255.0, green: 110/255.0, blue: 206/255.0, alpha: 1)
@@ -31,8 +33,8 @@ class Checkbox: UIView {
         } else {
             backgroundColor = whiteBackground
         }
+        completionHandler?(isChecked)
         isChecked = !isChecked
-        
     }
     
     init(){

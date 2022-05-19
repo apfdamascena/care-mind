@@ -86,12 +86,21 @@ extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
         let challengeToDraw = challengesToDo[indexPath.row]
         cell.draw(challengeToDraw)
         
+        cell.checkbox.completionHandler = { checked in
+            self.challengesToDo[indexPath.row].done = checked
+            self.handleWithCheckbox()
+        }
+        
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: cell.frame.height - 1, width: cell.frame.width, height: 0.3)
         bottomLine.backgroundColor = UIColor(red: 117/255.0, green: 110/255.0, blue: 206/255.0, alpha: 0.4).cgColor
         cell.layer.addSublayer(bottomLine)
         
         return cell
+    }
+    
+    private func handleWithCheckbox(){
+            NotificationCenter.default.post(name: Notification.Name("handle-memoji"), object: 10)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

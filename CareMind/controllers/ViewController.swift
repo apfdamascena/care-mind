@@ -22,6 +22,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         constraints()
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveNotification(_:)), name: Notification.Name("handle-memoji"), object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("handle-memoji"), object: nil)
+    }
+    
+    @objc func didReceiveNotification(_ notification: Notification){
+        guard let happy = notification.object as? Int else { return }
+        print("opa")
+        if(happy >= 10){
+            memoji.image = UIImage(named: "memoji-happy")
+        }
     }
 
     private func constraints(){
