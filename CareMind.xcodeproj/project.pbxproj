@@ -15,8 +15,6 @@
 		0D2AE5412831DBDB00F3B9A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AE53F2831DBDB00F3B9A4 /* LaunchScreen.storyboard */; };
 		0D2AE5502833002900F3B9A4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AE54F2833002900F3B9A4 /* RootViewController.swift */; };
 		0D2AE558283306CB00F3B9A4 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AE557283306CB00F3B9A4 /* CategoryViewController.swift */; };
-		0D2AE56728331EAB00F3B9A4 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AE56528331EAB00F3B9A4 /* CardCollectionViewCell.swift */; };
-		0D2AE56828331EAB00F3B9A4 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AE56628331EAB00F3B9A4 /* CardCollectionViewCell.xib */; };
 		0D2AE56B28331F4200F3B9A4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AE56A28331F4200F3B9A4 /* Card.swift */; };
 		0D2AE56E28333D7400F3B9A4 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 0D2AE56D28333D7400F3B9A4 /* YouTubeiOSPlayerHelper */; };
 		0D2AE57128333E5000F3B9A4 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AE57028333E5000F3B9A4 /* VideosViewController.swift */; };
@@ -27,6 +25,7 @@
 		0D5591AF2834C3B30011F6B1 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591AE2834C3B30011F6B1 /* Checkbox.swift */; };
 		0D5591B3283583AF0011F6B1 /* CardCCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591B2283583AF0011F6B1 /* CardCCollectionViewCell.swift */; };
 		0D5591B52835A0A20011F6B1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591B42835A0A20011F6B1 /* AddViewController.swift */; };
+		0D5591B92835C7B80011F6B1 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591B82835C7B80011F6B1 /* Blur.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +39,6 @@
 		0D2AE5422831DBDB00F3B9A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D2AE54F2833002900F3B9A4 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		0D2AE557283306CB00F3B9A4 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		0D2AE56528331EAB00F3B9A4 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		0D2AE56628331EAB00F3B9A4 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		0D2AE56A28331F4200F3B9A4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0D2AE57028333E5000F3B9A4 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
 		0D2AE57228334FE500F3B9A4 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
@@ -51,6 +48,7 @@
 		0D5591AE2834C3B30011F6B1 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		0D5591B2283583AF0011F6B1 /* CardCCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCCollectionViewCell.swift; sourceTree = "<group>"; };
 		0D5591B42835A0A20011F6B1 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		0D5591B82835C7B80011F6B1 /* Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +82,7 @@
 		0D2AE5332831DBD900F3B9A4 /* CareMind */ = {
 			isa = PBXGroup;
 			children = (
+				0D5591BA2835C9750011F6B1 /* effects */,
 				0D2AE56F28333D9500F3B9A4 /* views */,
 				0D2AE56928331F3600F3B9A4 /* models */,
 				0D2AE559283310E300F3B9A4 /* controllers */,
@@ -93,8 +92,6 @@
 				0D2AE53D2831DBDB00F3B9A4 /* Assets.xcassets */,
 				0D2AE53F2831DBDB00F3B9A4 /* LaunchScreen.storyboard */,
 				0D2AE53A2831DBD900F3B9A4 /* Main.storyboard */,
-				0D2AE56528331EAB00F3B9A4 /* CardCollectionViewCell.swift */,
-				0D2AE56628331EAB00F3B9A4 /* CardCollectionViewCell.xib */,
 			);
 			path = CareMind;
 			sourceTree = "<group>";
@@ -130,6 +127,14 @@
 				0D5591B2283583AF0011F6B1 /* CardCCollectionViewCell.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		0D5591BA2835C9750011F6B1 /* effects */ = {
+			isa = PBXGroup;
+			children = (
+				0D5591B82835C7B80011F6B1 /* Blur.swift */,
+			);
+			path = effects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D2AE56828331EAB00F3B9A4 /* CardCollectionViewCell.xib in Resources */,
 				0D2AE5412831DBDB00F3B9A4 /* LaunchScreen.storyboard in Resources */,
 				0D2AE53E2831DBDB00F3B9A4 /* Assets.xcassets in Resources */,
 				0D2AE53C2831DBD900F3B9A4 /* Main.storyboard in Resources */,
@@ -220,7 +224,7 @@
 				0D2AE57328334FE500F3B9A4 /* Video.swift in Sources */,
 				0D2AE5502833002900F3B9A4 /* RootViewController.swift in Sources */,
 				0D2AE5752834384400F3B9A4 /* ChallengeViewController.swift in Sources */,
-				0D2AE56728331EAB00F3B9A4 /* CardCollectionViewCell.swift in Sources */,
+				0D5591B92835C7B80011F6B1 /* Blur.swift in Sources */,
 				0D5591A62834A2E40011F6B1 /* ChallengeTableViewCell.swift in Sources */,
 				0D5591AF2834C3B30011F6B1 /* Checkbox.swift in Sources */,
 				0D2AE57128333E5000F3B9A4 /* VideosViewController.swift in Sources */,

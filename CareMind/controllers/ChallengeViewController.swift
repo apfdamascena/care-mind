@@ -67,11 +67,13 @@ class ChallengeViewController: UIViewController {
     }
     
     @IBAction func didTapAddChallenge(_ sender: UIButton) {
-        performSegue(withIdentifier: "addView", sender: self)
+        guard let addViewController = storyboard?.instantiateViewController(withIdentifier: "addView") else { return }
+        addViewController.modalPresentationStyle = .overCurrentContext
+        addViewController.modalTransitionStyle = .crossDissolve
+        present(addViewController, animated: true)
     }
-    
-    
 }
+
 
 extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

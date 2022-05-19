@@ -293,19 +293,74 @@
             </objects>
             <point key="canvasLocation" x="2812.3076923076924" y="-574.4075829383886"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="c3T-02-XS4">
             <objects>
-                <viewController id="AYW-Ft-GWc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addView" id="AYW-Ft-GWc" customClass="AddViewController" customModule="CareMind" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hgx-zD-kCW">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m42-dq-Fza">
+                                <rect key="frame" x="44" y="245" width="302" height="280"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar novo desafio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ox3-89-X2o">
+                                        <rect key="frame" x="16" y="24" width="173" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-YY-yoe">
+                                        <rect key="frame" x="16" y="53" width="270" height="101"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="101" id="fIp-Xj-P4Y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vK-OF-USC">
+                                        <rect key="frame" x="56" y="186" width="191" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="191" id="KDt-sr-0nn"/>
+                                            <constraint firstAttribute="height" constant="31" id="jUj-h0-GCx"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Adicionar">
+                                            <color key="baseBackgroundColor" red="0.45882352939999999" green="0.43137254899999999" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapAddButton:" destination="AYW-Ft-GWc" eventType="touchUpInside" id="D1N-hP-HXt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FRd-YY-yoe" secondAttribute="trailing" constant="16" id="62l-0q-Ewk"/>
+                                    <constraint firstItem="Ox3-89-X2o" firstAttribute="top" secondItem="m42-dq-Fza" secondAttribute="top" constant="24" id="B5h-vn-rJ8"/>
+                                    <constraint firstItem="0vK-OF-USC" firstAttribute="top" secondItem="FRd-YY-yoe" secondAttribute="bottom" constant="32" id="EFf-UY-3fy"/>
+                                    <constraint firstAttribute="trailing" secondItem="0vK-OF-USC" secondAttribute="trailing" constant="55" id="PAC-QB-OLW"/>
+                                    <constraint firstItem="Ox3-89-X2o" firstAttribute="leading" secondItem="m42-dq-Fza" secondAttribute="leading" constant="16" id="QLM-m5-c6f"/>
+                                    <constraint firstItem="0vK-OF-USC" firstAttribute="leading" secondItem="m42-dq-Fza" secondAttribute="leading" constant="56" id="UaB-7m-cr5"/>
+                                    <constraint firstItem="FRd-YY-yoe" firstAttribute="top" secondItem="Ox3-89-X2o" secondAttribute="bottom" constant="8" symbolic="YES" id="Z0V-FZ-FhF"/>
+                                    <constraint firstItem="FRd-YY-yoe" firstAttribute="leading" secondItem="m42-dq-Fza" secondAttribute="leading" constant="16" id="zUX-Eo-fAm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3Xm-hh-vwP"/>
+                        <constraints>
+                            <constraint firstItem="m42-dq-Fza" firstAttribute="top" secondItem="3Xm-hh-vwP" secondAttribute="top" constant="201" id="1df-al-9qa"/>
+                            <constraint firstItem="m42-dq-Fza" firstAttribute="centerX" secondItem="Hgx-zD-kCW" secondAttribute="centerX" id="AEa-sU-Llm"/>
+                            <constraint firstItem="3Xm-hh-vwP" firstAttribute="bottom" secondItem="m42-dq-Fza" secondAttribute="bottom" constant="265" id="F2E-8A-AhT"/>
+                            <constraint firstItem="m42-dq-Fza" firstAttribute="leading" secondItem="3Xm-hh-vwP" secondAttribute="leading" constant="44" id="pCv-9Z-BRh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardAddChallenge" destination="m42-dq-Fza" id="Kl5-qy-fkg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iob-ym-57r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3592" y="-566"/>
+            <point key="canvasLocation" x="3590.7692307692305" y="-566.58767772511851"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="p0p-Or-Cf4">
