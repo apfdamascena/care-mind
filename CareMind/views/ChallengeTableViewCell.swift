@@ -11,7 +11,7 @@ class ChallengeTableViewCell: UITableViewCell {
     
     static let identifier = "ChallengeTableCell"
     
-    var checkbox = Checkbox()
+    public var checkbox = Checkbox()
     
     let backgroundCell = UIColor(red: 37/255.0, green: 43/255.0, blue: 54/255.0, alpha: 1)
     
@@ -43,11 +43,11 @@ class ChallengeTableViewCell: UITableViewCell {
                            height: contentView.frame.height - 16)
     }
     
-    override func prepareForReuse() {
-
-    }
-    
     func draw(_ challenge: Challenge){
         challengeContent.text = challenge.text
+    }
+    
+    func change(){
+        checkbox.didTapCheckBox()
     }
 }

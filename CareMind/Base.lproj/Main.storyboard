@@ -356,6 +356,7 @@
                     </view>
                     <connections>
                         <outlet property="cardAddChallenge" destination="m42-dq-Fza" id="Kl5-qy-fkg"/>
+                        <outlet property="newChallenge" destination="FRd-YY-yoe" id="8BO-3a-XXb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iob-ym-57r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

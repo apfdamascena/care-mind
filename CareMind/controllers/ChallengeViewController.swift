@@ -17,13 +17,11 @@ class ChallengeViewController: UIViewController {
     let backgroundCellAfterSelected = UIColor(red: 37/255.0, green: 43/255.0, blue: 54/255.0, alpha: 1)
     
     var challengesToDo = [
-        Challenge(done: true, text: "Olhar a plantinha na porta"),
-        Challenge(done: true, text: "Olhar a plantinha na porta"),
-        Challenge(done: true, text: "Olhar a plantinha na porta"),
-        Challenge(done: true, text: "Olhar a plantinha na porta"),
-
+        Challenge(done: false, text: "Olhar a plantinha na porta"),
+        Challenge(done: false, text: "Olhar a plantinha na porta"),
+        Challenge(done: false, text: "Olhar a plantinha na porta"),
+        Challenge(done: false, text: "Olhar a plantinha na porta"),
     ]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,14 +60,17 @@ class ChallengeViewController: UIViewController {
             addChallenge.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             addChallenge.heightAnchor.constraint(equalToConstant: 47),
             addChallenge.widthAnchor.constraint(equalToConstant: 191)
-
         ])
     }
     
     @IBAction func didTapAddChallenge(_ sender: UIButton) {
-        guard let addViewController = storyboard?.instantiateViewController(withIdentifier: "addView") else { return }
+        guard let addViewController = storyboard?.instantiateViewController(withIdentifier: "addView") as? AddViewController else { return }
         addViewController.modalPresentationStyle = .overCurrentContext
         addViewController.modalTransitionStyle = .crossDissolve
+        addViewController.completionHandler = { challenge in
+            self.challengesToDo.append(Challenge(done: false, text: challenge))
+            self.challenges.reloadData()
+        }
         present(addViewController, animated: true)
     }
 }

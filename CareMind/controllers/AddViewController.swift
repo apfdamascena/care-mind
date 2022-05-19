@@ -13,6 +13,9 @@ class AddViewController: UIViewController {
     
     @IBOutlet weak var cardAddChallenge: UIView!
     
+    public var completionHandler: ((String) -> Void)?
+    @IBOutlet weak var newChallenge: UITextField!
+    
     private lazy var blurredView: UIView = {
         let view = UIView()
         let blurEffect = UIBlurEffect(style: .light)
@@ -57,6 +60,7 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func didTapAddButton(_ sender: UIButton) {
+        completionHandler?(newChallenge.text ?? "")
         dismiss(animated: true)
     }
     
