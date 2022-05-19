@@ -46,8 +46,4 @@ class ChallengeTableViewCell: UITableViewCell {
     func draw(_ challenge: Challenge){
         challengeContent.text = challenge.text
     }
-    
-    func change(){
-        checkbox.didTapCheckBox()
-    }
 }

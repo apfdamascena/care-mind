@@ -26,6 +26,7 @@
 		0D5591B3283583AF0011F6B1 /* CardCCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591B2283583AF0011F6B1 /* CardCCollectionViewCell.swift */; };
 		0D5591B52835A0A20011F6B1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591B42835A0A20011F6B1 /* AddViewController.swift */; };
 		0D5591B92835C7B80011F6B1 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591B82835C7B80011F6B1 /* Blur.swift */; };
+		0D5591BF2836025E0011F6B1 /* CategorySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5591BE2836025E0011F6B1 /* CategorySingleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		0D5591B2283583AF0011F6B1 /* CardCCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCCollectionViewCell.swift; sourceTree = "<group>"; };
 		0D5591B42835A0A20011F6B1 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		0D5591B82835C7B80011F6B1 /* Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
+		0D5591BE2836025E0011F6B1 /* CategorySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySingleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		0D2AE5332831DBD900F3B9A4 /* CareMind */ = {
 			isa = PBXGroup;
 			children = (
+				0D5591BB283602220011F6B1 /* singletons */,
 				0D5591BA2835C9750011F6B1 /* effects */,
 				0D2AE56F28333D9500F3B9A4 /* views */,
 				0D2AE56928331F3600F3B9A4 /* models */,
@@ -135,6 +138,14 @@
 				0D5591B82835C7B80011F6B1 /* Blur.swift */,
 			);
 			path = effects;
+			sourceTree = "<group>";
+		};
+		0D5591BB283602220011F6B1 /* singletons */ = {
+			isa = PBXGroup;
+			children = (
+				0D5591BE2836025E0011F6B1 /* CategorySingleton.swift */,
+			);
+			path = singletons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 				0D2AE558283306CB00F3B9A4 /* CategoryViewController.swift in Sources */,
 				0D5591A92834ADF20011F6B1 /* Challenge.swift in Sources */,
 				0D5591B3283583AF0011F6B1 /* CardCCollectionViewCell.swift in Sources */,
+				0D5591BF2836025E0011F6B1 /* CategorySingleton.swift in Sources */,
 				0D2AE5392831DBD900F3B9A4 /* ViewController.swift in Sources */,
 				0D2AE56B28331F4200F3B9A4 /* Card.swift in Sources */,
 				0D5591B52835A0A20011F6B1 /* AddViewController.swift in Sources */,

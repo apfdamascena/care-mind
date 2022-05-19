@@ -16,12 +16,7 @@ class ChallengeViewController: UIViewController {
     
     let backgroundCellAfterSelected = UIColor(red: 37/255.0, green: 43/255.0, blue: 54/255.0, alpha: 1)
     
-    var challengesToDo = [
-        Challenge(done: false, text: "Olhar a plantinha na porta"),
-        Challenge(done: false, text: "Olhar a plantinha na porta"),
-        Challenge(done: false, text: "Olhar a plantinha na porta"),
-        Challenge(done: false, text: "Olhar a plantinha na porta"),
-    ]
+    var challengesToDo: [Challenge] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

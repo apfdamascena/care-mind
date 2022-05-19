@@ -47,9 +47,13 @@ class CardCCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         image.frame = CGRect(x: 16, y: 16, width: 93, height: contentView.frame.height - 32)
         titleContent.frame = CGRect(x: image.frame.maxX + 16 , y: 19, width: contentView.frame.width - 32, height: 19)
+        
         textContent.frame = CGRect(x: image.frame.maxX  + 17 , y: titleContent.frame.maxY + 8
-                                    , width: contentView.frame.width - 32, height: contentView.frame.height - 32 - 19)
+                                   , width: contentView.frame.width - 54 - image.frame.width, height: contentView.frame.height - 32 - 19)
+        textContent.numberOfLines = 0
+        textContent.lineBreakMode = .byWordWrapping
         textContent.sizeToFit()
+
     }
 
     func draw(_ card: Card){

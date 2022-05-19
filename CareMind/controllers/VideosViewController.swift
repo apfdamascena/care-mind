@@ -21,9 +21,9 @@ class VideosViewController: UIViewController {
     @IBOutlet weak var videos: UICollectionView!
     
     let videosCard = [
-        Video(image: "corpofala", title: "testando", content: "testando", videoID: "AFYG2j0rkB8"),
-        Video(image: "limpeza", title: "testando", content: "testando", videoID: "FwcjXaXCEWY"),
-        Video(image: "exercicio", title: "testando", content: "testando", videoID: "DfIt58Ed5VU")
+        Video(image: "corpofala", title: "testando", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet id mauris tempor, pellentesque", videoID: "AFYG2j0rkB8"),
+        Video(image: "limpeza", title: "testando", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet id mauris tempor, pellentesque", videoID: "FwcjXaXCEWY"),
+        Video(image: "exercicio", title: "testando", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet id mauris tempor, pellentesque", videoID: "DfIt58Ed5VU")
     ];
     
     override func viewDidLoad() {
