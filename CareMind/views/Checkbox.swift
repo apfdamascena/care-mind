@@ -9,7 +9,7 @@ import UIKit
 
 class Checkbox: UIView {
 
-    var isChecked = true
+    var isChecked = false
     
     public var completionHandler: ((Bool) -> Void)?
     
@@ -27,13 +27,21 @@ class Checkbox: UIView {
         self.addGestureRecognizer(gesture)
     }
     
-    @objc func didTapCheckBox(){
+    func drawingNewChallenge(){
         if isChecked {
             backgroundColor = checkedColor
         } else {
             backgroundColor = whiteBackground
         }
-        completionHandler?(isChecked)
+    }
+    
+    @objc func didTapCheckBox(){
+        if !isChecked {
+            backgroundColor = checkedColor
+        } else {
+            backgroundColor = whiteBackground
+        }
+        completionHandler?(!isChecked)
         isChecked = !isChecked
     }
     

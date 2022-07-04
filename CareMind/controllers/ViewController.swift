@@ -31,8 +31,7 @@ class ViewController: UIViewController {
     
     @objc func didReceiveNotification(_ notification: Notification){
         guard let happy = notification.object as? Int else { return }
-        print("opa")
-        if(happy >= 10){
+        if(happy >= 6){
             memoji.image = UIImage(named: "memoji-happy")
         }
     }
@@ -81,8 +80,6 @@ class ViewController: UIViewController {
             
             callToAction.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 32),
             callToAction.topAnchor.constraint(equalTo: leftSentenceStatus.bottomAnchor, constant: 4)
-            
-            
         ])
     }
 }

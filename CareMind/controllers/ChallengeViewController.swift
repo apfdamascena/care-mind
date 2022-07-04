@@ -25,6 +25,14 @@ class ChallengeViewController: UIViewController {
         challenges.dataSource = self
         challenges.delegate = self
         challenges.register(ChallengeTableViewCell.self, forCellReuseIdentifier: ChallengeTableViewCell.identifier)
+        let completed = CategorySingleton.shared.countCompletedChallengesAtCategory()
+        completedChallenge.text = "\(completed)/\(challengesToDo.count)"
+    }
+    
+    private func reloadCompletedIndexs(){
+        let completed = CategorySingleton.shared.countCompletedChallengesAtCategory()
+        let currentChallenges = CategorySingleton.shared.models[CategorySingleton.shared.index]
+        completedChallenge.text = "\(completed)/\(currentChallenges.count)"
     }
     
     private func constraints(){
@@ -62,9 +70,12 @@ class ChallengeViewController: UIViewController {
         guard let addViewController = storyboard?.instantiateViewController(withIdentifier: "addView") as? AddViewController else { return }
         addViewController.modalPresentationStyle = .overCurrentContext
         addViewController.modalTransitionStyle = .crossDissolve
-        addViewController.completionHandler = { challenge in
-            self.challengesToDo.append(Challenge(done: false, text: challenge))
-            self.challenges.reloadData()
+        addViewController.completionHandler = { [weak self] challenge in
+            let newChallenge = Challenge(done: false, text: challenge)
+            self?.challengesToDo.append(newChallenge)
+            CategorySingleton.shared.models[CategorySingleton.shared.index].append(newChallenge)
+            self?.reloadCompletedIndexs()
+            self?.challenges.reloadData()
         }
         present(addViewController, animated: true)
     }
@@ -82,7 +93,10 @@ extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.draw(challengeToDraw)
         
         cell.checkbox.completionHandler = { checked in
-            self.challengesToDo[indexPath.row].done = checked
+            let indexChallenge = indexPath.row
+            let indexCategory = CategorySingleton.shared.index
+            CategorySingleton.shared.models[indexCategory][ indexChallenge].done = checked
+            self.reloadCompletedIndexs()
             self.handleWithCheckbox()
         }
         
@@ -95,7 +109,8 @@ extension ChallengeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     private func handleWithCheckbox(){
-            NotificationCenter.default.post(name: Notification.Name("handle-memoji"), object: 10)
+        CategorySingleton.shared.countCompletedChallenges()
+        NotificationCenter.default.post(name: Notification.Name("handle-memoji"), object: CategorySingleton.shared.completed)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

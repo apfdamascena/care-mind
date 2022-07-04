@@ -13,7 +13,10 @@ class CategorySingleton {
     
     static let shared = CategorySingleton()
     
+    
     var models: [[Challenge]] = [];
+    var index: Int = -1;
+    var completed = 0;
     
     var plants = [
         Challenge(done: false, text: "Cultivar a planta roberto."),
@@ -50,5 +53,27 @@ class CategorySingleton {
             workout,
             music
         ]
+    }
+    
+    func countCompletedChallenges(){
+        var currentCompleted = 0
+        models.forEach{ model in
+            model.forEach{ challenge in
+                if challenge.done {
+                    currentCompleted += 1
+                }
+            }
+        }
+        completed = currentCompleted
+    }
+    
+    func countCompletedChallengesAtCategory() -> Int {
+        var currentCompleted = 0
+        models[index].forEach{ challenge in
+            if challenge.done {
+                currentCompleted += 1
+            }
+        }
+        return currentCompleted
     }
 }

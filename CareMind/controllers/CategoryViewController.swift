@@ -12,9 +12,7 @@ class CategoryViewController: UIViewController {
     @IBOutlet weak var titleCategory: UILabel!
     @IBOutlet weak var categories: UICollectionView!
     @IBOutlet weak var underline: UIView!
-    
-    var dataIndex = -1;
-    
+        
     let goBackColor = UIColor(red: 251/255.0, green: 209/255.0, blue: 135/255.0 , alpha: 1)
     let borderColor = UIColor(red: 251/255.0, green: 209/255.0, blue: 135/255.0 , alpha: 0.7)
 
@@ -85,12 +83,13 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        dataIndex = indexPath.row
+        CategorySingleton.shared.index = indexPath.row
         performSegue(withIdentifier: "categoryToChallenge", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let categoryViewController = segue.destination as? ChallengeViewController else { return }
-        categoryViewController.challengesToDo = CategorySingleton.shared.models[dataIndex]
+        let index = CategorySingleton.shared.index
+        categoryViewController.challengesToDo = CategorySingleton.shared.models[index]
     }
 }

@@ -45,5 +45,7 @@ class ChallengeTableViewCell: UITableViewCell {
     
     func draw(_ challenge: Challenge){
         challengeContent.text = challenge.text
+        checkbox.isChecked = challenge.done
+        checkbox.drawingNewChallenge()
     }
 }
